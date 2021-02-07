@@ -13,9 +13,9 @@ function countdown() {
     const numberOfDaysInMonth = {
         'january': 31,
         'february': function () {
-            var year = currentDate.getFullYear();
+            let year = currentDate.getFullYear();
             //check of leap-year
-            var isLeap = new Date(year, 2, 1, -1).getDate() == 29;
+            let isLeap = new Date(year, 2, 1, -1).getDate() == 29;
             if (isLeap) {
                 return 29;
             } else {
@@ -36,8 +36,8 @@ function countdown() {
 
     let diff = new Date(finishDate - new Date());
     let keysOfMonths = function (monthObject) {
-        var objArr = [];
-        for (var prop in monthObject) {
+        let objArr = [];
+        for (let prop in monthObject) {
             objArr.push(monthObject[prop]);
         }
         return objArr;
@@ -59,7 +59,7 @@ function countdown() {
 
 
     // let years = diff.toISOString().slice(0, 4) - 1970;
-    let month = diff.getMonth() + 1;
+    let month = diff.getMonth();
     let days = daysInMonth;
     const hours = Math.floor(totalSeconds / 3600) % 24;
     const minutes = Math.floor(totalSeconds / 60) % 60;
