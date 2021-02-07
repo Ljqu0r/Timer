@@ -58,14 +58,14 @@ function countdown() {
     let daysInMonth = daysInMonthCheck(monthArr);
 
 
-    let years = diff.toISOString().slice(0, 4) - 1970;
+    // let years = diff.toISOString().slice(0, 4) - 1970;
     let month = diff.getMonth() + 1;
     let days = daysInMonth;
     const hours = Math.floor(totalSeconds / 3600) % 24;
     const minutes = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds) % 60;
 
-    console.log(years, month, days, hours, minutes, seconds);
+    // console.log(years, month, days, hours, minutes, seconds);
     monthEl.innerHTML = formatTime(month);
     daysEl.innerHTML = formatTime(days);
     hoursEl.innerHTML = formatTime(hours);
