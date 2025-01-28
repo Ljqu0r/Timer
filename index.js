@@ -4,7 +4,7 @@ const hoursEl = document.querySelector('#hours');
 const minutesEl = document.querySelector('#minutes');
 const secondsEl = document.querySelector('#seconds');
 
-const finishDate = new Date('1 May 2022');
+const finishDate = new Date('1 May 2025');
 
 function countdown() {
     const finishLearndDate = new Date(finishDate);
